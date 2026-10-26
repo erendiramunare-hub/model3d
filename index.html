@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Visor 3D WebXR</title>
+  <title>Visor 3D</title>
   
-  <script type="module" src="//cdn.jsdelivr.net/npm/@google/model-viewer@3.3.0/dist/model-viewer.min.js"></script>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
 
   <style>
     body {
@@ -14,11 +14,16 @@
       width: 100vw;
       height: 100vh;
       overflow: hidden;
+      background-color: #111111;
+      color: #ffffff;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
     model-viewer {
       width: 100%;
       height: 100%;
-      background-color: #f8f9fa;
     }
   </style>
 </head>
@@ -31,7 +36,7 @@
     camera-controls 
     auto-rotate 
     shadow-intensity="1"
-    alt="Pieza 3D en Realidad Aumentada">
+    alt="Pieza 3D">
   </model-viewer>
 
 </body>
