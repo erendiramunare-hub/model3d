@@ -7,8 +7,27 @@
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
   <style>
     body { margin: 0; padding: 0; background-color: #f0f0f0; display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column; font-family: sans-serif; }
-    model-viewer { width: 100%; max-width: 600px; height: 70vh; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    .ar-button { background-color: #1a73e8; color: white; border: none; padding: 15px 30px; border-radius: 30px; font-size: 16px; font-weight: bold; margin-top: 20px; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    
+    /* Agregamos position: relative para que el botón no se salga del recuadro blanco */
+    model-viewer { width: 100%; max-width: 600px; height: 70vh; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); position: relative; }
+    
+    .ar-button { 
+      background-color: #85200c; /* Tu color guinda */
+      color: white; 
+      border: none; 
+      padding: 15px 30px; 
+      border-radius: 30px; 
+      font-size: 16px; 
+      font-weight: bold; 
+      cursor: pointer; 
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      
+      /* Instrucciones para anclar el botón al centro inferior */
+      position: absolute; 
+      bottom: 20px; 
+      left: 50%; 
+      transform: translateX(-50%); 
+    }
   </style>
 </head>
 <body>
@@ -16,7 +35,7 @@
   <model-viewer 
     src="https://raw.githubusercontent.com/erendiramunare-hub/model3d/main/encatrinados3d.glb" 
     ar 
-    ar-modes="webxr quick-look" 
+    ar-modes="webxr scene-viewer quick-look" 
     camera-controls 
     auto-rotate 
     shadow-intensity="1">
